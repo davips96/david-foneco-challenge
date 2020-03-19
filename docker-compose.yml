@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  database:
+    build: ./database/
+    ports:
+      - "3306:3306"
+
+  server:
+    build: ./server/
+    links:
+      - database
+    ports:
+      - "5000:5000"
+
+  client:
+    build: ./client/
+    links:
+      - server
+    ports:
+      - "3000:3000"

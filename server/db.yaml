@@ -1,0 +1,4 @@
+mysql_user: 'david'
+mysql_password: '4321'
+mysql_host: 'database'
+mysql_db: 'foneco'

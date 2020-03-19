@@ -1,0 +1,7 @@
+FROM mysql:5.7
+ENV MYSQL_ROOT_PASSWORD foneco
+ENV MYSQL_DATABASE foneco
+ENV MYSQL_USER david
+ENV MYSQL_PASSWORD 4321
+ADD setup.sql /docker-entrypoint-initdb.d
+EXPOSE 3306
